@@ -20,17 +20,10 @@ app.use(fileUpload());
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-    origin: 'https://client-tasks-g8tou6bz1-daniel-popka-potapenkos-projects.vercel.app',  // Замените на точный URL вашего фронтенда
-    credentials: true,
-}));
-
-
-/*
-app.use(cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
 }));
-*/
+
 app.use('/api/v1/users', userRouter);  
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/image', cldRouter);
