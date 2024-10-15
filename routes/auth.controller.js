@@ -40,10 +40,10 @@ export const signup = async (req, res, next) => {
 
     res
       .cookie('taskly_token', token, {
-        //httpOnly: true,
-        sameSite: "None",
+        httpOnly: true,
+        //sameSite: "None",
         secure: true,
-       // partitioned: true,
+        partitioned: true,
       })
       .status(200)
       .json(rest);
@@ -76,10 +76,10 @@ export const signin = async (req, res, next) => {
 
     res
       .cookie('taskly_token', token, {
-        //httpOnly: true,
-        sameSite: "None",
+        httpOnly: true,
+        //sameSite: "None",
         secure: true,
-       // partitioned: true,
+        partitioned: true,
       })
       .status(200)
       .json(rest);
@@ -92,8 +92,8 @@ export const signin = async (req, res, next) => {
 export const signOut = async (req, res, next) => {
   try {
     res.clearCookie('taskly_token', {
-      //httpOnly: true,
-      sameSite: "None",
+      httpOnly: true,
+      //sameSite: "None",
       secure: true,
     });
     
