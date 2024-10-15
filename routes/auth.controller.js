@@ -41,7 +41,7 @@ export const signup = async (req, res, next) => {
     res
       .cookie('taskly_token', token, {
         httpOnly: true,
-        SameSite: "None",
+        sameSite: "None"
         secure: true,
         partitioned: true,
       })
@@ -77,7 +77,7 @@ export const signin = async (req, res, next) => {
     res
       .cookie('taskly_token', token, {
         httpOnly: true,
-        SameSite: "None",
+        sameSite: "None",
         secure: true,
         partitioned: true,
       })
@@ -93,7 +93,7 @@ export const signOut = async (req, res, next) => {
   try {
     res.clearCookie('taskly_token', {
       httpOnly: true,
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
     
