@@ -41,7 +41,7 @@ export const signup = async (req, res, next) => {
     res
       .cookie('taskly_token', token, {
         httpOnly: true,
-        sameSite: "None"
+        sameSite: "None",
         secure: true,
         partitioned: true,
       })
