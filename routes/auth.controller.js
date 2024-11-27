@@ -95,6 +95,7 @@ export const signOut = async (req, res, next) => {
       httpOnly: true,
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
     
     res.status(200).json({ message: 'Выход успешно выполнен' });
